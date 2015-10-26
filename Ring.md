@@ -37,9 +37,9 @@ monoid identity **&forall; x. 1 <> x = x = x <> 1**
 A type that is 2 interrelated Monoids at once.
 
 #### Addition Monoid
-One of the Monoids must be commutative, we will call it the Addition Monoid (+, 0).
+One of the Monoids must be commutative, we will call it the Addition Monoid (**+**, **0**).
 
-\+ : a -> a -> a
+**\+ : a -> a -> a**
 
 associativity **&forall; x y z. (x + y) + z = x + (y + z)**
 
@@ -50,7 +50,7 @@ monoid identity **&forall; x. 0 + x = x = x + 0**
 commutativity **&forall; x y. x + y = y + x**
 
 #### Multiplication Monoid
-One of the Monoids must have an annihiliation *value* (**0**), which is the identity of the Addition Monoid, we will call it the Multiplication Monoid (**\***, **1**).
+One of the Monoids must have an annihiliation *value* (**0**), which is the identity of the Addition Monoid, we will call it the Multiplication Monoid (** \* **, **1**).
 
 **\* : a -> a -> a**
 
@@ -69,7 +69,7 @@ left distributivity **&forall; x y z. x \* (y + z) = (x \* y) + (x \* z)**
 right distributivity **&forall; x y z. (x + y) \* z = (a \* z) + (y \* z)**
 
 -- Things that are Semirings (and nothing more)
-   - Integers(&#8484;) with ((**+**, **0**),(**\***, **1**))
+   - Integers(&#8484;) with ((**+**, **0**),(** \* **, **1**))
    - Booleans with ((**and**, **True**),(**or**, **False**)) or ((**or**, **False**),(**and**, **True**))
    - Strings with ((**++**, **""**), (**union**, **""**))
    - Reals (potentially Floats) with ((**max**, **&infin;**),(**+**, **0**))
@@ -80,7 +80,7 @@ right distributivity **&forall; x y z. (x + y) \* z = (a \* z) + (y \* z)**
 
 ## ModuloSemiring
 
-A type that is a Semiring ((**+**, **0**),(**\***, **1**)) with two additional operators, division (**/**) and mod (**%**).
+A type that is a Semiring ((**+**, **0**),(** \* **, **1**)) with two additional operators, division (**/**) and mod (**%**).
 
 **/ : a -> a -> a**
 
@@ -90,7 +90,7 @@ remainder **&forall; x y. x / y * y + (x % y) = x**
 
 ## Ring
 
-A type that is a semiring ((**+**, **0**),(**\***, **1**)) with one additional operator (**-**), that must be the inverse of the Addition Monoid's operator (**+**).
+A type that is a semiring ((**+**, **0**),(** \* **, **1**)) with one additional operator (**-**), that must be the inverse of the Addition Monoid's operator (**+**).
 
 **&ndash; : a -> a -> a**
 
