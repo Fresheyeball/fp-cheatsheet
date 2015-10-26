@@ -98,6 +98,9 @@ applicative interchange __x <\*> pure y = pure ((flip $) y) <\*> x__
 
 bind associativity **(x >>= f) >>= g = x >>= (&lambda; k. f k >>= g)**
 
+-- Things that are Bindable (and nothing more)
+   - I can find no examples of this, there are likely some since Bindable is broken out from Monad. 
+
 ## Monad
 A type(**m**) that is Bindable and therefore also (Applicative, Applyable, and a Functor).  To be a Monad two more axioms must be satisfied **left monad identity** and **right monad identity**. Monads also get a new function for free of note **join**, which works for all Monads.
 
