@@ -36,7 +36,7 @@ associative composition __compose <$> j <\*> g <\*> h = j <\*> (g <\*> h)__
 
 -- Things that are Applyable (and nothing more)
   - A Tuple in which the first value is filled out. IE: **(Int, )** is a Functor on the right hand value, but *not* applicative as its impossible to define **pure** as it would need to be **: a -> (r, a)** without knowing **r**.
-  - Its possible to write several examples that are Applyable but not Applicative, however they don't seem to be useful for programming. For example **data Phantom x = Phantom { void :: Void }** it is possible to write out **map** and __<*>__ in a destructive fashion (since x is never used and void can never be accessed), but **pure** cannot be defined since it would result in **&bottom;** which would be absurd.
+  - Its possible to write several examples that are Applyable but not Applicative, however they don't seem to be useful for programming. For example **data Phantom x = Phantom { void : Void }** it is possible to write out **map** and __<*>__ in a destructive fashion (since x is never used and void can never be accessed), but **pure** cannot be defined since it would result in **&bottom;** which would be absurd.
 
 ## Applicative
 A type(**f**) that is a Apply-able (and therefore also a Functor), for which an additional function can be defined **pure**.
