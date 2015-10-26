@@ -1,7 +1,7 @@
 ## Functor
 A type(**f**) for which a mapping function can be defined.
 
-**f : \* -> \***
+__f : \* -> \*__
 
 **map : (a -> b) -> f a -> f b**
 
@@ -14,9 +14,9 @@ where **id x = x**
 ## Applyable
 A type(**f**) that is a Functor, for which the following operator can be defined.
 
-**f : \* -> \***
+__f : \* -> \*__
 
-**let <$> = map **
+**let <$> = map**
 
 **<$> : (a -> b) -> f a -> f b**
 
@@ -31,7 +31,7 @@ associative composition **compose <$> j <*> g <*> h = j <*> (g <*> h)**
 ## Applicative
 A type(**f**) that is a Apply-able (and therefore also a Functor), for which an additional function can be defined **pure**.
 
-**f : \* -> \***
+__f : \* -> \*__
 
 **let <$> = map **
 
@@ -56,7 +56,7 @@ applicative interchange **x <*> pure y = pure ((flip $) y) <*> x**
 ## Bindable
 A type (**m**) that is an Applicative for which another operator may be defined **bind**.
 
-**m : \* -> \***
+__m : \* -> \*__
 
 **let <$> = map **
 
@@ -87,7 +87,7 @@ bind associativity **(x >>= f) >>= g = x >>= (&lambda; k. f k >>= g)**
 ## Monad
 A type(**m**) that is Bindable and therefore also (Applicative, Applyable, and a Functor).  To be a Monad two more axioms must be satisfied **left monad identity** and **right monad identity**.
 
-**m : \* -> \***
+__m : \* -> \*__
 
 **let <$> = map **
 
