@@ -33,7 +33,7 @@ A type(**f**) that is a Apply-able (and therefore also a Functor), for which an 
 
 __f : \* -> \*__
 
-**let <$> = map **
+__let <$> = map__
 
 **<$> : (a -> b) -> f a -> f b**
 
@@ -58,7 +58,7 @@ A type (**m**) that is an Applicative for which another operator may be defined 
 
 __m : \* -> \*__
 
-**let <$> = map **
+__let <$> = map__
 
 **<$> : (a -> b) -> m a -> m b**
 
@@ -89,7 +89,7 @@ A type(**m**) that is Bindable and therefore also (Applicative, Applyable, and a
 
 __m : \* -> \*__
 
-**let <$> = map **
+__let <$> = map__
 
 **<$> : (a -> b) -> m a -> m b**
 
