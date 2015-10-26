@@ -103,6 +103,8 @@ A type(**m**) that is Bindable and therefore also (Applicative, Applyable, and a
 
 **pure** is also renamed to **return**. It is more idiomatic to use **pure** when your code is about Applicative, but use **return** when your code is more Monadic, even though they do the same thing. There is also an argument to be made for not having **return** is the name is confusing.
 
+It has also been said that Monads can form a "spine" in the core of your application's design, in a nice way.
+
 __m : \* -> \*__
 
 __<$> = map__
@@ -138,3 +140,16 @@ left monad identity **&forall; x. pure x >>= f = f x**
 right monad identity **&forall; x. x >>= pure = x**
 
 **join : m (m a) -> m a** (the join instance for lists is **flatten** in lodash speak)
+
+-- Things that are Monads
+  - Lists
+  - Trees
+  - Arrows with the first __*__ type filled out (Monad properties are on the return type (codomain))
+  - IO
+  - Futures/Promises/Thunks
+  - Parsers
+  - State (or rather there is a Monadic form of State)
+  - Maybes
+  - Eithers with the first __*__ type filled out (Monad properties on the right hand side only)
+  - Other 'Errorable' types like Result (again only on the right hand side)
+  - Many more things can be (and are useful to) model as a Monad, choosing to define your model in such a way that it has all the Monadic properties. For example in the Snap server framework Handlers are Monads.
