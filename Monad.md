@@ -28,6 +28,13 @@ functor composition **map (h . g) = map h . map g**
 
 associative composition **compose <$> j <*> g <*> h = j <*> (g <*> h)**
 
+-- Things that are Applyable (and nothing more)
+  - A Tuple in which the first value is filled out.
+    IE: (Int, ) is a Functor on the right hand value,
+        but *not* applicative as its impossible to define **pure**
+        as it would need to be **: a -> (r, a)** without knowing **r**.
+  -
+
 ## Applicative
 A type(**f**) that is a Apply-able (and therefore also a Functor), for which an additional function can be defined **pure**.
 

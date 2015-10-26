@@ -1,6 +1,8 @@
 ## Semigroup
 A type (**a**) with a binary operator (**<>**) that is associative.
 
+__a : *__
+
 **<> : a -> a -> a**
 
 associative **&forall; x y z. (x <> y) <> z = x <> (y <> z)**
@@ -12,6 +14,8 @@ associative **&forall; x y z. (x <> y) <> z = x <> (y <> z)**
 
 ## Monoid
 A type that is a Semigroup, but additionally has an identity *value* (**1**).
+
+__a : *__
 
 **<> : a -> a -> a**
 
@@ -35,6 +39,8 @@ monoid identity **&forall; x. 1 <> x = x = x <> 1**
 
 ## Semiring
 A type that is 2 interrelated Monoids at once.
+
+__a : *__
 
 #### Addition Monoid
 One of the Monoids must be commutative, we will call it the Addition Monoid (**+**, **0**).
