@@ -90,7 +90,7 @@ remainder **&forall; x y. x / y * y + (x % y) = x**
 
 ## Ring
 
-A type that is a semiring ((**+**, **0**),(\* , **1**)) with one additional operator (**-**), that must be the inverse of the Addition Monoid's operator (**+**).
+A type that is a semiring ((**+**, **0**),(\* , **1**)) with one additional operator (**&ndash;**), that must be the inverse of the Addition Monoid's operator (**+**).
 
 **&ndash; : a -> a -> a**
 
