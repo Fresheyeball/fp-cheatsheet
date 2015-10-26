@@ -8,6 +8,7 @@ associative **&forall; x y z. (x <> y) <> z = x <> (y <> z)**
 -- Things that are Semigroups (and nothing more)
   - Integers(&#8484;) with **min** as the operator. **min** is the lower of two Integers, which is associative but has no identity value.
   - Non-empty lists with concatination (**++**), as **++** is associative but without empty list, there is no identity value.
+  - Signals
 
 ## Monoid
 A type that is a Semigroup, but additionally has an identity *value* (**1**).
@@ -21,8 +22,7 @@ associativity **&forall; x y z. (x <> y) <> z = x <> (y <> z)**
 monoid identity **&forall; x. 1 <> x = x = x <> 1**
 
 -- Things that are Monoids (and nothing more)
-  - Lists with (**++**, **[]**)
-  - Signals
+  - Lists with (**++**, **[]**)  
   - Lots of containers that can be empty
   - Containers that hold a single item, where that item is a Monoid
   - A Maybe of any Semigroup is a Monoid with identity provided by Nothing
